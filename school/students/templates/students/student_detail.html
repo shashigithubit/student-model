@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Detail</title>
+</head>
+<body>
+    <h1>{{ student.name }}</h1>
+    <p>Age: {{ student.age }}</p>
+    <p>Email: {{ student.email }}</p>
+    <p>City: {{ student.city }}</p>
+
+    <h2>Subject Marks</h2>
+    <table>
+        <tr>
+            <th>Language 1</th>
+            <th>Language 2</th>
+            <th>Acting</th>
+            <th>Dance</th>
+        </tr>
+        {% for mark in subject_marks %}
+        <tr>
+            <td>{{ mark.language1 }}</td>
+            <td>{{ mark.language2 }}</td>
+            <td>{{ mark.acting }}</td>
+            <td>{{ mark.dance }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
